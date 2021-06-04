@@ -2,18 +2,83 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <title>Jonathan Rivera's Software Product Sprint Page</title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
   </head>
   <body>
-    <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+    <div class="container" style="max-width: 1000">      
+        <div class="jumbotron text-center">
+            <h1>Jonathan Rivera</h1>
+            <h3>Member of Google SPS 2021</h3> 
+        </div>
+
+        <div class="container" style="max-width: 720px">
+            <div class="row">
+                <div class="col">
+                    <div class="text-center">  
+                        <img class="rounded-circle" src="img/me.jpg" height="400" width="400" style="margin-top: 4px">
+                        <h2 style="margin-top: 28px; margin-bottom: 20px">Summary</h2>
+                    </div>
+                    <p style="font-size: 20px">
+                        Hi! My name is Jonathan Rivera, and I'm a Cyber Security major from Kean University.
+                        <br><br>
+                        Over the past few years, I've had a part in numerous projects and experiences that
+                        have helped me learn many great and amazing skills, and today, I'm still enthusiastic
+                        to learn and train more. This website is dedicated to showing off all the work I have
+                        been a part of, as well as acting as my own learning experience on how to create
+                        cleaner websites.
+                    </p>
+                    <h2 class="text-center" style="margin-top: 44px; margin-bottom: 20px">My Projects</h2>
+                    <p style="font-size: 20px; margin-bottom: 34px">
+                        From websites that use CGI programs to handle requests to a full demo bank system and more,
+                        here are a few projects that I'm really proud of! If you would like to see more, please visit my main page,
+                        as well as my github!
+                    </p>
+                    <a href="http://eve.kean.edu/~rivejona/CPS3740" style="text-decoration: none">
+                        <div class="card-body border rounded-0" style="padding: 20px; margin-bottom: 30px; margin-left: 10px; margin-right: 10px">
+                            <h4 class="card-title" style="color: cornflowerblue">Demo Bank System</h4> 
+                            <p class="card-text" style="color: black">
+                                This is my Demo Bank System project! Using PHP with mySQL in the backend, this demo website
+                                can handle secure user logins as well as allow users to make and edit transactions, and see
+                                transaction history. (Planning to add CSS in the future)
+                            </p>
+                        </div>
+                    </a>
+                    <a href="http://yoda.kean.edu/~rivejona/CPS3525" style="text-decoration: none">
+                        <div class="card-body border rounded-0" style="padding: 20px; margin-bottom: 30px; margin-left: 10px; margin-right: 10px">
+                            <h4 class="card-title" style="color: cornflowerblue">Web CGI Programs</h4> 
+                            <p class="card-text" style="color: black">
+                                These are my Web CGI Programs! I took part in this project to learn more about how to handle
+                                web requests, and each program uses their own language, allowing me to learn the pros and cons to
+                                each. From PHP to Python to Java, these websites can use the power of well established languages
+                                to handle user requests.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="http://eve.kean.edu/~rivejona" style="text-decoration: none">
+                        <div class="card-body border rounded-0" style="padding: 20px; margin-bottom: 40px; margin-left: 10px; margin-right: 10px">
+                            <h4 class="card-title" style="color: cornflowerblue">My Main Project Page</h4> 
+                            <p class="card-text" style="color: black">
+                                If you would like to view more of my projects, click here to visit my main page! This website, hosted
+                                by my school Kean University, is open 24/7, and recieves updates frequently. Come check it out!
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="jumbotron text-center" style="margin-bottom: 0px">
+            <h2 style="margin-top: -40px; margin-bottom: 20px">Contact Me!</h2>
+            <h3>rivejona@kean.edu</h4>
+            <a href="https://www.linkedin.com/in/jonathan-n-rivera-99652820b"><h3>LinkedIn</h4></a>
+            <a href="https://github.com/J-N-R"><h3 style="margin-bottom: -40px">GitHub</h4></a>
+        </div>
     </div>
   </body>
 </html>
