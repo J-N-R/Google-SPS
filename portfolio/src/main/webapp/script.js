@@ -12,17 +12,37 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/**
- * Adds a random greeting to the page.
- */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+// global variables so games array only needs to load once
+// temp solution, a queue would be great for this
+var lastPicked = -1;
+var secondLastPicked = -1;
+var thirdLastPicked = -1;
 
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+var array;
 
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+// load games array into global variable
+window.onload = async function(){
+    const responseFromServer = await fetch('/games');
+    array = await responseFromServer.json();
+};
+
+// retrieve a random game from the json array. 
+// lastPicked and secondLastpicked, etc are variables used to keep track of games to avoid duplication when pressing the button
+// (makes it more random!)
+async function getGame() {
+  var randomNumber = Math.floor(Math.random() * array.length);
+
+  while(randomNumber == lastPicked || randomNumber == secondLastPicked || randomNumber == thirdLastPicked) {
+    randomNumber = Math.floor(Math.random() * array.length);
+  }
+
+  thirdLastPicked = secondLastPicked;
+  secondLastPicked = lastPicked;
+  lastPicked = randomNumber;
+  
+  myGame = array[randomNumber];
+
+  document.getElementById("game_name").innerHTML = myGame.name;
+  document.getElementById("game_description").innerHTML = myGame.message;
+  document.getElementById("game_years").innerHTML = "Years Played: <b>" + myGame.yearsPlayed + "</b>";
 }
