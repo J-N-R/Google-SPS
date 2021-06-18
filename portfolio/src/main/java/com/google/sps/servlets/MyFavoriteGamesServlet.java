@@ -11,13 +11,15 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/games")
 public class MyFavoriteGamesServlet extends HttpServlet {
 
+  private static final long serialVersionUID = 1L;
+
   final static Game[] games = {
       new Game("Minecraft", "This game was one of my first 'official' games for the computer, and I've loved it so much ever since I started playing it in 2012.", 9),
       new Game("Team Fortress 2", "This game, a bit more mature, still remains one of my favorite games till today. Starting in 2015, I've always enjoyed the goofy chaotic fun it brought.", 6),
       new Game("Overwatch", "<b>Meh.</b>", 1),
       new Game("Starcraft II", "I feel like everybody has their own 'league of legends' type game where they like to take it serious and can do good in it. While I'm not good at this one, I really enjoy playing it, and its something I could take serious too if I wanted", 2),
       new Game("Terraria", "This one's pretty fun. I played it a lot back in the day.", 3),
-      new Game("Your feelings.", "<img src='img/trollface.png'><br>Hahahahah just kidding. Maybe", 99),
+      new Game("Your feelings.", "<center><img src='img/trollface.png'><br>Hahahahah just kidding. Maybe</center>", 99),
       new Game("Wii Sports and other wii games", "Technically I grew up with a gamecube, but ever since I found a way to play some of my old games on the computer I love reliving those old memories and playing my favorite classics.", 2)
   };
 

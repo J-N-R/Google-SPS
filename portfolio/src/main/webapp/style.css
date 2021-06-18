@@ -1,9 +1,67 @@
-#content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
+#title-box {
+    background-color: #429cfc;
+    border: solid 6px white;
+    border-radius: 90px;
+    border-top: 0;
 }
 
-#greeting-container {
-  margin-top: 20px;
+#middle {
+    background-color: #C7D3DD;
+    max-width: 1000;
+}
+
+#picture {
+    border: solid 6px white;
+    margin-top: 4px;
+    height: 400px;
+    width: 400px;
+}
+
+#games {
+    background-color: #f8f9fa;
+    border-radius: 16px; 
+    padding: 2rem; 
+}
+
+#form {
+    display: none;
+}
+
+#name {
+    border: 1px solid #ced4da;
+    border-radius: 24px;
+    text-align: center;
+    outline: none;
+}
+
+#bottom-box {
+    background-color: #77B6EA;
+    border: solid 6px white;
+    border-radius: 90px; 
+    border-bottom: 0;
+    margin-bottom: 0;
+}
+
+.bottom-20 {
+    margin-bottom: 20px;
+}
+
+.myCard {  
+    background-color: white;
+    margin: 0px 10px 30px;
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.small {
+    font-size: 1rem;
+    color: black
+}
+
+label {
+    font-weight: bold;
+}
+
+p {
+    font-size: 20px;
 }

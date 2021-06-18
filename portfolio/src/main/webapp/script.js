@@ -46,3 +46,8 @@ async function getGame() {
   document.getElementById("game_description").innerHTML = myGame.message;
   document.getElementById("game_years").innerHTML = "Years Played: <b>" + myGame.yearsPlayed + "</b>";
 }
+
+function showForm() {
+  document.getElementById("form-button").style.display = "none";
+  document.getElementById("form").style.display = "block";
+}
