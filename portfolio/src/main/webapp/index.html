@@ -1,8 +1,7 @@
-<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Jonathan Rivera's Software Product Sprint Page</title>
+    <title>Jonathan's Portfolio</title>
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -12,9 +11,9 @@
     <script src="script.js"></script>
   </head>
   <body>
-    <div class="container" style="max-width: 1000">      
-        <div class="jumbotron text-center">
-            <h1>Jonathan Rivera</h1>
+    <div class="container" id="middle">      
+        <div class="jumbotron text-center rounded-top" id="title-box">
+            <h1 style="color: white">Jonathan Rivera</h1>
             <h3>Member of Google SPS 2021</h3> 
         </div>
 
@@ -22,10 +21,10 @@
             <div class="row">
                 <div class="col">
                     <div class="text-center">  
-                        <img class="rounded-circle" src="img/me.jpg" height="400" width="400" style="margin-top: 4px">
-                        <h2 style="margin-top: 28px; margin-bottom: 20px">Summary</h2>
+                        <img class="rounded-circle" src="img/me.jpg" id="picture">
+                        <h2 class="bottom-20" style="margin-top: 28px">Summary</h2>
                     </div>
-                    <p style="font-size: 20px">
+                    <p>
                         Hi! My name is Jonathan Rivera, and I'm a Cyber Security major from Kean University.
                         <br><br>
                         Over the past few years, I've had a part in numerous projects and experiences that
@@ -34,16 +33,16 @@
                         been a part of, as well as acting as my own learning experience on how to create
                         cleaner websites.
                     </p>
-                    <h2 class="text-center" style="margin-top: 44px; margin-bottom: 20px">My Projects</h2>
-                    <p style="font-size: 20px; margin-bottom: 34px">
+                    <h2 class="text-center bottom-20" style="margin-top: 44px">My Projects</h2>
+                    <p style="margin-bottom: 34px">
                         From websites that use CGI programs to handle requests to a full demo bank system and more,
                         here are a few projects that I'm really proud of! If you would like to see more, please visit my main page,
                         as well as my github!
                     </p>
                     <a href="http://eve.kean.edu/~rivejona/CPS3740" style="text-decoration: none">
-                        <div class="card-body border rounded-0" style="padding: 20px; margin-bottom: 30px; margin-left: 10px; margin-right: 10px">
+                        <div class="card-body myCard">
                             <h4 class="card-title" style="color: cornflowerblue">Demo Bank System</h4> 
-                            <p class="card-text" style="color: black">
+                            <p class="card-text small">
                                 This is my Demo Bank System project! Using PHP with mySQL in the backend, this demo website
                                 can handle secure user logins as well as allow users to make and edit transactions, and see
                                 transaction history. (Planning to add CSS in the future)
@@ -51,9 +50,9 @@
                         </div>
                     </a>
                     <a href="http://yoda.kean.edu/~rivejona/CPS3525" style="text-decoration: none">
-                        <div class="card-body border rounded-0" style="padding: 20px; margin-bottom: 30px; margin-left: 10px; margin-right: 10px">
+                        <div class="card-body myCard">
                             <h4 class="card-title" style="color: cornflowerblue">Web CGI Programs</h4> 
-                            <p class="card-text" style="color: black">
+                            <p class="card-text small">
                                 These are my Web CGI Programs! I took part in this project to learn more about how to handle
                                 web requests, and each program uses their own language, allowing me to learn the pros and cons to
                                 each. From PHP to Python to Java, these websites can use the power of well established languages
@@ -62,31 +61,59 @@
                         </div>
                     </a>
                     <a href="http://eve.kean.edu/~rivejona" style="text-decoration: none">
-                        <div class="card-body border rounded-0" style="padding: 20px; margin-bottom: 40px; margin-left: 10px; margin-right: 10px">
+                        <div class="card-body myCard" style="margin-bottom: 40px">
                             <h4 class="card-title" style="color: cornflowerblue">My Main Project Page</h4> 
-                            <p class="card-text" style="color: black">
+                            <p class="card-text small">
                                 If you would like to view more of my projects, click here to visit my main page! This website, hosted
                                 by my school Kean University, is open 24/7, and recieves updates frequently. Come check it out!
                             </p>
                         </div>
                     </a>
-                    <h2 class="text-center" style="margin-top: 44px; margin-bottom: 20px">Learn More About Me!</h2>
-                    <div class="jumbotron" style="padding: 2rem">
-                        <h1 id="game_name">My Favorite Games</h1>
-                        <p id="game_description">Click The button below to see one of my favorite games!</p>
-                        <p>
-                            <button class="btn btn-primary" type="button" onclick="getGame()">Game</button>
-                            <span style="font-size: 1.5rem; line-height: 1.2; margin-left: 22rem;" id="game_years"></span>
+                    <h2 class="text-center bottom-20" style="margin-top: 44px">Learn More About Me!</h2>
+                    <div class="jumbotron" id="games">
+                        <h1 class="text-center" id="game_name">My Favorite Games</h1>
+                        <p class="small" id="game_description">Click The button below to see one of my favorite games!</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <button class="btn btn-primary" type="button" onclick="getGame()">Game</button>
+                            </div>
+                            <div class="col-md-6 text-right">
+                                <span style="font-size: 1.5rem; line-height: 1.2" id="game_years"></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="jumbotron text-center" style="margin-bottom: 0px">
-            <h2 style="margin-top: -40px; margin-bottom: 20px">Contact Me!</h2>
-            <h3>rivejona@kean.edu</h4>
-            <a href="https://www.linkedin.com/in/jonathan-n-rivera-99652820b"><h3>LinkedIn</h4></a>
-            <a href="https://github.com/J-N-R"><h3 style="margin-bottom: -40px">GitHub</h4></a>
+        <div class="jumbotron text-center rounded-bottom" id="bottom-box">
+            <h2 class="bottom-20" style="margin-top: -40px">Contact Me!</h2>
+            <button type="button" class="btn-lg btn-primary" onclick="showForm()" id="form-button" style="margin-bottom: 1rem">Show Form</button>
+            <div class="container" style="max-width: 400px" id="form">
+                <form action="/emailer" method="POST">
+                    <div class="form-group"> 
+                        <label for="name">What's your name?</label>
+                        <input type="text" class="form-control-lg" id="name" name="name" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">                     
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea class="form-control" id="message" rows="5" name="message" placeholder="Enter your message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <h3>rivejona@kean.edu</h3>
+            <a href="https://www.linkedin.com/in/jonathan-n-rivera-99652820b"><h3>LinkedIn</h3></a>
+            <a href="https://github.com/J-N-R"><h3 style="margin-bottom: -40px">GitHub</h3></a>
         </div>
     </div>
+
   </body>
 </html>
